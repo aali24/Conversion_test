@@ -16,15 +16,15 @@ def test_unit_conversion():
 
     # input the value to convert
     input_field = driver.find_element("xpath", '//*[@name="fromVal"]')
-    input_field.send_keys("10")
+    input_field.send_keys("-10")
 
     # select the unit to convert from
     unit_from = driver.find_element("xpath", '//select[@name="calFrom"]')
-    unit_from.send_keys("Inches")
+    unit_from.send_keys("Centimeters")
 
     # select the unit to convert to
     unit_to = driver.find_element("xpath", '//select[@name="calTo"]')
-    unit_to.send_keys("Centimeters")
+    unit_to.send_keys("Inches")
 
     # perform the conversion
     input_field.send_keys(Keys.RETURN)
@@ -32,12 +32,12 @@ def test_unit_conversion():
 
     # assert that the conversion was successful
     result = driver.find_element("xpath", '//input[@name="toVal"]')
-    assert result.get_attribute("value") == "25.4"
+    assert result.get_attribute("value") == "-3.937007874"
 
     # repeat the above steps for a different conversion
     input_field = driver.find_element("xpath", '//*[@name="fromVal"]')
     input_field.clear()
-    input_field.send_keys("20")
+    input_field.send_keys("20E306")
     unit_from = driver.find_element("xpath", '//select[@name="calFrom"]')
     unit_from.send_keys("Centimeters")
     unit_to = driver.find_element("xpath", '//select[@name="calTo"]')
@@ -45,7 +45,7 @@ def test_unit_conversion():
     input_field.send_keys(Keys.RETURN)
     time.sleep(2)
     result = driver.find_element("xpath", '//input[@name="toVal"]')
-    assert result.get_attribute("value") == "7.874015748"
+    assert result.get_attribute("value") == "7.874015748E+306"
 
     # close the browser window
     driver.quit()
