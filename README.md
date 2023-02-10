@@ -1,22 +1,24 @@
 # Conversion_test
 
 Conversion Calculator Test Script
-This is a Python test script using Selenium WebDriver to test the functionalities of the website Conversion Calculator. The script tests two automated test cases to verify that the length conversions are performed correctly.
+This is a Python test script using Selenium WebDriver to test the functionalities of the website Conversion Calculator. The script tests two cases to verify that the length conversions are performed correctly.
 
 Requirements
 
 Python 3
 Selenium
+Chrome Browser
 WebDriver Manager
 
 Set Up
 
-Install Python 3 if not already installed
-Install Selenium and WebDriver Manager using the following command:
-Copy code
-pip install selenium webdriver-manager
+Install Python 3 if not already installed.
+Install Selenium and WebDriver Manager. Ensure latest version of Chrome is installed.
+
 Clone this repository or download the test script file.
+
 Running the Test Script
+
 Open terminal or command prompt
 Navigate to the directory where the test script is located
 Run the following command:
